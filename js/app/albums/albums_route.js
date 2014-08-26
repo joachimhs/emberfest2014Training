@@ -1,6 +1,3 @@
-var PhotoApp = Ember.Application.create({
-
-});
 PhotoApp.AlbumsRoute = Ember.Route.extend({
     model: function() {
         var albums = [];
@@ -10,9 +7,4 @@ PhotoApp.AlbumsRoute = Ember.Route.extend({
 
         return albums;
     }
-});
-PhotoApp.Router.map(function() {
-    this.resource("albums", {path: "/"}, function() {
-
-    });
 });

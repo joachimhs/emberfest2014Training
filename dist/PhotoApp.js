@@ -12,7 +12,11 @@ PhotoApp.AlbumsRoute = Ember.Route.extend({
 });
 PhotoApp.Album = DS.Model.extend({
    name: DS.attr('string'),
-   sortIndex: DS.attr('number')
+   sortIndex: DS.attr('number'),
+    photos: DS.hasMany('photo', {async: true})
+});
+PhotoApp.Photo = DS.Model.extend({
+    href: DS.attr('string')
 });
 PhotoApp.Router.map(function() {
     this.resource("albums", {path: "/"}, function() {

@@ -1,0 +1,1 @@
+[{"id":"albums_sortIndex","name":"sortIndex","type":"textfield","required":false},{"id":"albums_name","name":"name","type":"textfield","required":false},{"id":"albums_photos","name":"photos","type":"toMany","required":false,"relation":"photos"}]

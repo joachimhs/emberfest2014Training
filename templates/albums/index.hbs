@@ -1,0 +1,5 @@
+{{#each album in controller}}
+    {{#link-to "albums.album" album}}
+        {{album.id}} <br />
+    {{/link-to}}
+{{/each}}

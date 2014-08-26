@@ -1,5 +1,11 @@
 THIS IS MY SELCECTED ALBUM: {{id}} <br />
 
-{{#each photo in photos}}
-    {{photo.id}} <br />
-{{/each}}
+<div class="row">
+    {{#each photo in photos}}
+        <div class="col-md-2">
+            <img {{bind-attr src=photo.thumb}} />
+        </div>
+    {{/each}}
+</div>
+
+

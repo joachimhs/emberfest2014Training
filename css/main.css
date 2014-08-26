@@ -1,0 +1,43 @@
+header {
+    min-height: 200px;
+    background-color: #1c6780;
+}
+
+header h1 {
+    text-transform: uppercase;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+    margin-top: 0px;
+    padding-top: 40px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a.visited {
+    color: #fff;
+}
+
+header a.active {
+    color: #fff;
+}
+
+header a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#mainArea {
+    min-height: 400px;
+}
+
+footer {
+    background-color: #6bb2c6;
+    color: #000;
+    margin-top: 50px;
+}

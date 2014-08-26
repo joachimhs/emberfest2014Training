@@ -1,0 +1,3 @@
+PhotoApp.Router.map(function() {
+
+});

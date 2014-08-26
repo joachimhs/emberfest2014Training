@@ -1,18 +1,30 @@
 var PhotoApp = Ember.Application.create({
 
 });
+PhotoApp.AlbumsController = Ember.ArrayController.extend({
+    sortProperties: ['sortIndex'],
+    sortAscending: true
+});
 PhotoApp.AlbumsRoute = Ember.Route.extend({
     model: function() {
-        var albums = [];
-
-        albums.pushObject(Ember.Object.create({"id": "Album One"}));
-        albums.pushObject(Ember.Object.create({"id": "Album Two"}));
-
-        return albums;
+        return this.store.find('album');
     }
+});
+PhotoApp.Album = DS.Model.extend({
+   name: DS.attr('string'),
+   sortIndex: DS.attr('number')
 });
 PhotoApp.Router.map(function() {
     this.resource("albums", {path: "/"}, function() {
 
     });
+});
+DS.RESTAdapter.reopen({
+    namespace: 'json/data'
+});
+
+PhotoApp.Adapter = DS.RESTAdapter.extend({});
+
+PhotoApp.ApplicationStore = DS.Store.extend({
+    adapter: 'PhotoApp.Adapter'
 });

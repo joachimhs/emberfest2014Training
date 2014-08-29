@@ -1,0 +1,13 @@
+
+<div class="col-md-12 text-center">
+    <div class="photoControl pull-left" {{action "prevPhoto" target=view}}>
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </div>
+
+    <img {{bind-attr src=href}} class="largePhoto"/>
+
+    <div class="photoControl pull-right" {{action "nextPhoto" target=view}}>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+</div>
+

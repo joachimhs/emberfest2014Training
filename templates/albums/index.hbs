@@ -1,5 +1,7 @@
-{{#each album in controller}}
-    {{#link-to "albums.album" album}}
-        {{album.id}} <br />
-    {{/link-to}}
+{{#each album in arrangedContent}}
+    <div>
+        {{#link-to "album" album}}
+            <img {{bind-attr src=album.cover.thumbnail}} /> {{album.id}} - {{album.sortIndex}}
+        {{/link-to}}
+    </div>
 {{/each}}

@@ -41,3 +41,21 @@ footer {
     color: #000;
     margin-top: 50px;
 }
+
+.largePhoto {
+    max-height: 400px;
+    min-height: 400px;
+}
+
+.photoControl {
+    max-height: 400px;
+    min-height: 400px;
+    max-width: 40px;
+    min-width: 40px;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+.photoControl span {
+    margin-top: 170px;
+}
